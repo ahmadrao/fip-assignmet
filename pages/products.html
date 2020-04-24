@@ -3,11 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Products</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/home.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <title>Products</title>
 </head>
 
 <body>
@@ -37,10 +39,119 @@
     </div>
 
     <section>
-        <h1>Products Here</h1>
+        <h1 class="heading">Products Here</h1>
+
+        <div class="products">
+            <div class="card">
+                <div class="img">
+                    <img src="..//images/5beer.png" alt="Beer">
+                </div>
+                <div class="card-body">
+                    <div class="title">Titlte</div>
+                    <p class="desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore dignissimos
+                        ratione consequuntur perspiciatis velit laboriosam autem doloremque possimus?
+                    </p>
+                    <button class="btn-card" onclick="openPopup(this.parentElement.parentElement) ">Order Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="..//images/5beer.png" alt="Beer">
+                </div>
+                <div class="card-body">
+                    <div class="title">Titlte</div>
+                    <p class="desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore dignissimos
+                        ratione consequuntur perspiciatis velit laboriosam autem doloremque possimus?
+                    </p>
+                    <button class="btn-card">Order Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="..//images/5beer.png" alt="Beer">
+                </div>
+                <div class="card-body">
+                    <div class="title">Titlte</div>
+                    <p class="desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore dignissimos
+                        ratione consequuntur perspiciatis velit laboriosam autem doloremque possimus?
+                    </p>
+                    <button class="btn-card">Order Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="..//images/5beer.png" alt="Beer">
+                </div>
+                <div class="card-body">
+                    <div class="title">Titlte</div>
+                    <p class="desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore dignissimos
+                        ratione consequuntur perspiciatis velit laboriosam autem doloremque possimus?
+                    </p>
+                    <button class="btn-card">Order Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="..//images/5beer.png" alt="Beer">
+                </div>
+                <div class="card-body">
+                    <div class="title">Titlte</div>
+                    <p class="desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore dignissimos
+                        ratione consequuntur perspiciatis velit laboriosam autem doloremque possimus?
+                    </p>
+                    <button class="btn-card">Order Now</button>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 
+    <!-- Popup -->
+    <div class="modal">
+        <div class="modal-body">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h3 class="title">Modal</h3>
+            <div class="modal-content">
+                <div class="left">
+                    <p class="modal-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt possimus, nostrum at omnis optio
+                        voluptates aut qui. Corrupti neque iusto fuga illum facere adipisci reiciendis laborum veniam.
+                        Aspernatur, eum distinctio.
+                    </p>
+                </div>
+                <div class="right">
+                    <!-- <img src="../images/promo 3 png.png" alt=""> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const modal = document.querySelector('.modal');
+        function openPopup(e) {
+            document.querySelector('.modal .title').innerHTML = e.querySelector('.title').innerHTML
+            document.querySelector('.modal .modal-desc').innerHTML = e.querySelector('.desc').innerHTML
+            document.querySelector('.modal .right').innerHTML = `<img src="${e.querySelector('img').src}" alt="${e.querySelector('img').alt}">`
+            modal.style.display = "block";
+        }
+        function closePopup() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
     <script type="text/javascript" src="../js/home.js" />
+
     </body>
 </html>

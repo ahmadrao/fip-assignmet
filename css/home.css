@@ -173,11 +173,13 @@ header {
 /* Image Gallery */
 .image-gallery {
   /* position: absolute; */
-  margin-bottom: 1.4rem;
+  /* margin-bottom: 1.4rem; */
 }
 
 .row {
   margin: 30px;
+  margin-bottom: 60px;
+  height: 222px;
 }
 
 .responsive-column {
@@ -310,5 +312,68 @@ footer {
 @media only screen and (max-width: 800px) {
   .footer__nav__links {
     display: inline-block;
+  }
+}
+
+/************************** Images SlidShow ***************************/
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  /* max-height: 780px; */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
   }
 }
