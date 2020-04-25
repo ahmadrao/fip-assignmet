@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/partials/header.css">
+    <link rel="stylesheet" href="../css/partials/back-to-top.css">
+    <link rel="stylesheet" href="../css/partials/footer.css">
     <link rel="stylesheet" href="../css/products.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet">
@@ -42,71 +44,7 @@
         <h1 class="heading">Products Here</h1>
 
         <div class="products">
-            <div class="card">
-                <div class="img">
-                    <img src="..//images/5beer.png" alt="Beer">
-                </div>
-                <div class="card-body">
-                    <div class="title">Titlte</div>
-                    <p class="desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore dignissimos
-                        ratione consequuntur perspiciatis velit laboriosam autem doloremque possimus?
-                    </p>
-                    <button class="btn-card" onclick="openPopup(this.parentElement.parentElement) ">Order Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img">
-                    <img src="..//images/5beer.png" alt="Beer">
-                </div>
-                <div class="card-body">
-                    <div class="title">Titlte</div>
-                    <p class="desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore dignissimos
-                        ratione consequuntur perspiciatis velit laboriosam autem doloremque possimus?
-                    </p>
-                    <button class="btn-card">Order Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img">
-                    <img src="..//images/5beer.png" alt="Beer">
-                </div>
-                <div class="card-body">
-                    <div class="title">Titlte</div>
-                    <p class="desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore dignissimos
-                        ratione consequuntur perspiciatis velit laboriosam autem doloremque possimus?
-                    </p>
-                    <button class="btn-card">Order Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img">
-                    <img src="..//images/5beer.png" alt="Beer">
-                </div>
-                <div class="card-body">
-                    <div class="title">Titlte</div>
-                    <p class="desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore dignissimos
-                        ratione consequuntur perspiciatis velit laboriosam autem doloremque possimus?
-                    </p>
-                    <button class="btn-card">Order Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img">
-                    <img src="..//images/5beer.png" alt="Beer">
-                </div>
-                <div class="card-body">
-                    <div class="title">Titlte</div>
-                    <p class="desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore dignissimos
-                        ratione consequuntur perspiciatis velit laboriosam autem doloremque possimus?
-                    </p>
-                    <button class="btn-card">Order Now</button>
-                </div>
-            </div>
+           
         </div>
 
     </section>
@@ -120,9 +58,8 @@
             <div class="modal-content">
                 <div class="left">
                     <p class="modal-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt possimus, nostrum at omnis optio
-                        voluptates aut qui. Corrupti neque iusto fuga illum facere adipisci reiciendis laborum veniam.
-                        Aspernatur, eum distinctio.
+                        The Carlsberg Foundation is one of the world's oldest commercial foundations. Here, ambitious brewing enterprise
+                        blossoms side by side with support for the finest science, scholarship, art and culture. 
                     </p>
                 </div>
                 <div class="right">
@@ -133,25 +70,45 @@
         </div>
     </div>
 
-    <script>
-        const modal = document.querySelector('.modal');
-        function openPopup(e) {
-            document.querySelector('.modal .title').innerHTML = e.querySelector('.title').innerHTML
-            document.querySelector('.modal .modal-desc').innerHTML = e.querySelector('.desc').innerHTML
-            document.querySelector('.modal .right').innerHTML = `<img src="${e.querySelector('img').src}" alt="${e.querySelector('img').alt}">`
-            modal.style.display = "block";
-        }
-        function closePopup() {
-            modal.style.display = "none";
-        }
+    <!-- Back To Top Button -->
+    <span onclick="backToTop()" class="back-to-top" id="backToTop" title="Back to top"><span><i
+                class="fas fa-arrow-up"></i></span>
+        <svg style="width: 14px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up"
+            class="svg-inline--fa fa-arrow-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+            </path>
+        </svg>
+    </span>
+    
+    
+    
+    <!-- Footer -->
+    <section>
+        <footer>
+            <div class="footer__nav__links">
+                <a class="logo" href="/"><img src="../images/bottle1.jpg" width="11%" alt="logo"></a>
+            </div>
+            <nav>
+                <ul class="footer__nav__links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="pages/about-us.html">About Us</a></li>
+                    <li><a href="pages/products.html">Products</a></li>
+                    <li><a href="pages/advertisements.html">Advertisements</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <div class="bo-wrap clr4">
+            <div class="bo-footer">
+                <div class="bo-footer-copyright">&copy;2020 example.com All rights reserved.</div>
+            </div>
+        </div>
+    </section>
 
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-    <script type="text/javascript" src="../js/home.js" />
+
+    <script src="../js/products.js"></script>
+    <script src="../js/partials/header.js"></script>
+    <script src="../js/partials/back-to-top.js"></script>
 
     </body>
 </html>

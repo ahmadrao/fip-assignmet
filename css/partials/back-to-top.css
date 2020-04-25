@@ -1,0 +1,21 @@
+/* Back to Top Button */
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  color: rgba(0, 136, 169, 1);
+  border: 2px solid rgba(0, 136, 169, 1);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.back-to-top:hover {
+  background-color: rgba(0, 136, 169, 1);
+  color: white;
+}

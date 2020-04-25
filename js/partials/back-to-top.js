@@ -1,11 +1,3 @@
-function openNav() {
-  document.getElementById('mobile__menu').style.width = '100%';
-}
-
-function closeNav() {
-  document.getElementById('mobile__menu').style.width = '0';
-}
-
 //Get the button:
 backToTopButton = document.getElementById('backToTop');
 
@@ -26,23 +18,4 @@ function scrollFunction() {
 function backToTop() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName('mySlides');
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = 'block';
-  slides[slideIndex - 1].style.height = '100vh';
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
